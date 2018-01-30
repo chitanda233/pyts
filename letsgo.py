@@ -16,8 +16,6 @@ wb.sheets[0].range('A1').value = "hello world"
 wb.sheets[1].range('A1').value = "hello world"
 
 wb.save('test.xlsx')
-# wb2.save('test2.xlsx')
-
 wb.close()
 app.quit()
 print("goodbye world")

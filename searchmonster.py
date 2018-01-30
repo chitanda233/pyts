@@ -21,6 +21,8 @@ rng_name = sht.range((1, 1), (nrow, 1))
 keyword = "侦察机"
 level = "1档"
 L2 = []
+
+#先找到队应名字的怪物
 for name in rng_name:
     if (name.value == keyword):
         L1 = rng_all.rows[name.row - 1]
