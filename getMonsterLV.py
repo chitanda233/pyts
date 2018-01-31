@@ -3,14 +3,22 @@ import xlwings as xlv
 
 def getMonLV(leveltype, gamelevel):
     level_type = leveltype
+<<<<<<< HEAD
     game_level = int(gamelevel)
+=======
+    game_level = gamelevel
+>>>>>>> b0c712d73939c76fb00af7b673fecb18c7621f52
     level_row = 0
     dicts = {}
 
     ap1 = xlv.App(visible=False, add_book=False)
     ap1.display_alerts = False
     wb1 = ap1.books.open('怪物模板.xlsx')
-    sht1 = wb1.sheets['单打怪物分布']
+
+    if  level_type.strip ==('单打'):
+        sht1 = wb1.sheets['单打怪物分布']
+    elif level_type.strip ==('双打'):
+        pass
 
     nrow = sht1.api.UsedRange.Rows.count
     ncol = sht1.api.UsedRange.Columns.count
